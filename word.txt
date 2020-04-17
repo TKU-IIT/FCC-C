@@ -1,0 +1,6 @@
+Covid-19        Wuhan           0001
+Bob             ajid            0009
+Chiya           Tokyo           0018
+Winne           Beijing         0066
+Tedros          Ethiopia        0075
+Xi              dsljase         0099
