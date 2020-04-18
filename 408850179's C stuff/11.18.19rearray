@@ -1,0 +1,67 @@
+#include<stdio.h>
+int read_values(int a[], int max_n_val){
+	int n_values, v;
+	
+	scanf("%d", &v);
+	n_values = 0;
+	while(n_values<max_n_val && v>0){
+		a[n_values] = v;
+		n_values = n_values+1;
+		if (n_values<max_n_val){
+			scanf("%d", &v);
+		}
+	}
+}
+
+void print_values(int a[], int n_values){
+	int c;
+	
+	c = 0;
+	while(c<n_values){
+		printf("%d ", a[c]);
+		c = c+1;
+	}
+	printf("\n");
+}
+
+int deltermine_smallest(int a[], int start, int end){
+	int samllest, i;
+	
+	smallest = start;
+	i = start+1;
+	while(i<=end){
+		if(a[smallest]>a[i]){
+			smallest = i;
+		}
+	}
+	return smallest;
+}
+
+void sort_values(int a[], int n_values){
+	int i;
+	
+	i = 0;
+	while(i<n_values-1){
+		int j, tmp;
+		j = deltermine_smallest(a, i, n_values-1);
+		
+		tmp = a[j];
+		a[j] = a[i];
+		a[i] = tmp;
+		
+		i = i+1;
+	}
+}
+
+int main(int argc, char **argv){
+	int a[20];
+	int n_values;
+	
+	n_values = read_values(a, 20);
+	print_values(a, n_values);
+	
+	sort_values(a, n_values);
+	print_values(a, n_values);
+	
+	return 0;
+}

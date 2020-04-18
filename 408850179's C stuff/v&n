@@ -1,0 +1,20 @@
+#include<stdio.h>
+
+int main(int argc, char **argv){
+	int N, counter;
+	double v, sum;
+	
+	scanf("%d", &N);
+	
+	sum = 0;
+	counter = 0;
+	while(counter < N){
+		scanf("%lf", &v);
+		sum = sum + v;
+		counter = counter + 1;
+	}
+	
+	printf("sum=%lf", sum);
+	
+	return 0;
+}

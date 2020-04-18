@@ -1,0 +1,38 @@
+#include<stdio.h>
+
+void print_full_row(int W){
+	int c;
+	
+	c = 0;
+	while(c < W){
+		printf("*");
+		c = c + 1;
+	}
+	printf("\n");
+}
+void print_left_right(int W){
+	int c;
+	
+	printf("*");
+	c = 0;
+	while(c < W-2){
+		printf(" ");
+		c = c+1;
+	}
+	printf("\n");
+}
+int main(int argc, char **argv){
+	int W, H, c;
+	
+	scanf("%d", &W);
+	scanf("%d", &H);
+	
+	print_full_row(W);
+	c = 0;
+	while(c < H-2){
+		print_left_right(W);
+		c = c + 1;
+	}
+	print_full_row(W);
+	return 0;
+}

@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main(int argc, char **argv){
+	int N, counter;
+	double v, max, min;
+	
+	scanf("%d", &N);
+	scanf("%ls", &v);
+	max = v;
+	min = v;
+	
+	counter = 0;
+	while(counter < N){
+		scanf("%lf", &v);
+		if(v>max){
+			max = v;
+		}
+		if(v<min){
+			min = v;
+		}
+		counter = counter + 1;
+	}
+	
+	printf("sum=%lf", sum);
+	
+	return 0;
+}

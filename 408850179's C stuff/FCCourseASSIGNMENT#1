@@ -1,0 +1,31 @@
+#include<stdio.h>
+
+int main(int argc, char** argv){
+    int input;
+    scanf("%d",&input);
+    for(int a =0; a<input;a++){
+        if(a==0||a==input-1){
+            for(int a = 0;a<input;a++){
+                printf("*");
+			}
+		}else if(a==(input/2)){
+            for(int a = 0;a<input;a++){
+                if(a==input/2||a==0||a==input-1){
+                    printf("*");
+                }else{
+                    printf(" ");
+                }
+            }
+        }else{
+            for(int a = 0;a<input;a++){
+                if(a==0||a==input-1){
+                    printf("*");
+                }else{
+                    printf(" ");
+                }
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}

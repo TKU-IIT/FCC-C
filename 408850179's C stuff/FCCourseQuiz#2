@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+void print_letter_grade(int grade){
+    if(grade>=80){
+        printf("A");
+    }else{
+        if(grade>=70){
+			printf("B");
+        }else{
+            if(grade>=65){
+				printf("C");
+            }else{
+                if(grade>=60){
+                    printf("D");
+                }else{
+                    printf("F");
+                }
+            }
+        }
+    }
+}
+int main(int argc, char**argv) {
+    int grade;
+    scanf("%d", &grade);
+    while (grade>=0){
+        print_letter_grade(grade);
+        scanf("%d", &grade);
+    }
+    return 0;
+}
